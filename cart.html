@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+        }
+        .cart-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+        .cart-item-details h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .cart-item-details p {
+            color: #555;
+        }
+        .cart-item-price {
+            color: #333;
+            font-weight: bold;
+        }
+        .total-section {
+            text-align: right;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Icon -->
+    <a href="index.html" class="home-icon">
+        <i class="fas fa-home text-2xl text-gray-700"></i>
+    </a>
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-semibold mb-6 text-center">Your Cart</h1>
+
+        <!-- Cart Items Container -->
+        <div id="cart-items" class="space-y-6">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <!-- Total Price Section -->
+        <div class="total-section">
+            <p class="text-lg">Total: <span id="total-price" class="cart-item-price">0/-</span></p>
+            <button class="mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to load cart items from localStorage and display them
+        function loadCart() {
+            // Retrieve cart data from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            let totalPrice = 0;
+
+            // If cart is empty, show a message
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-center text-xl font-semibold text-gray-700">Your cart is empty.</p>';
+                document.getElementById('total-price').innerText = '0/-';
+                return;
+            }
+
+            // Clear previous content
+            cartItemsContainer.innerHTML = '';
+
+            // Loop through cart items
+            cart.forEach(item => {
+                // Check if the item has all required properties
+                if (!item.image || !item.title || !item.price) {
+                    console.error('Invalid item data:', item);
+                    return;
+                }
+
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="cart-item-details">
+                        <h3>${item.title}</h3>
+                        <p>${item.price}</p>
+                    </div>
+                    <div class="cart-item-price">${item.price}</div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItem);
+
+                // Update total price
+                const itemPrice = parseFloat(item.price.replace('$', '').replace('/-', ''));
+                totalPrice += itemPrice;
+            });
+
+            // Display total price
+            document.getElementById('total-price').innerText = `$${totalPrice}/-`;
+        }
+
+        // Call the loadCart function when the page is loaded
+        window.onload = loadCart;
+
+        // Proceed to checkout function
+        function proceedToCheckout() {
+            // Clear cart from localStorage
+            localStorage.removeItem('cart');
+
+            // Show alert and reload page
+            alert("Data successfully proceeded to checkout!");
+            loadCart();  // Re-render the cart (which will now be empty)
+        }
+    </script>
+<script>
+    // Retrieve cart items from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    function displayCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+            return;
+        }
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="${item.img}" alt="${item.name}" width="100">
+                <div>
+                    <h4>${item.name}</h4>
+                    <p>Price: ${item.price}</p>
+                </div>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+    }
+    
+    displayCart();
+    </script>
+</body>
+</html>

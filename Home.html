@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-1">
+            <a href="#" class="logo" style="display: flex;justify-content: center;"> <img src="Logo.jpg" alt="" style="height: 70px;width: 70px;border-radius: 100%;"><h1>WSHOP</h1></a>
+            <div class="form-container">
+                <form action="">
+                    <input type="text" placeholder="search product" class="search">
+                    <label for="search" class="fas fa-search"></label>
+                </form>
+            </div>
+        </div>
+
+        <div class="header-2">
+            <div onclick="toggle_menu()" class="fas fa-bars menu"></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="#home">home</a></li>
+                    <li><a href="#feature">feature</a></li>
+                    <li><a href="#arrival">arrived</a></li>
+                    <li><a href="#Popular">Popular</a></li>
+                    <li><a href="#about">about us</a></li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home_slide owl-carousel owl-theme">
+            <div class="item">
+                <img src="home_img1.jpg" alt="">
+                <div class="content">
+                    <h3>SHOPPING</h3>
+                    <p>Shopping small refers to supporting local, independent businesses instead of large corporations.</p>
+                    <a href="+feature"><button class="button-disc">Discover</button></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="home_img2.jpg" alt="">
+                <div class="content">
+                    <h3>GADGETS</h3>
+                    <p>Gadgets are small, innovative electronic or mechanical devices designed to perform specific functions efficiently.</p>
+                    <a href="#"><button class="button-disc">Discover</button></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="home_img3.jpg" alt="">
+                <div class="content">
+                    <h3>CLOTHS</h3>
+                    <p>Clothes are garments made from various materials, designed to cover, protect, and adorn the human body.</p>
+                    <a href="#"><button class="button-disc">Discover</button></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="home_img4.jpg" alt="">
+                <div class="content">
+                    <h3>GROCERIES</h3>
+                    <p>Groceries are everyday food items and household essentials purchased for regular consumption and use.</p>
+                    <a href="#"><button class="button-disc">Discover</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="arrival" id="arrival">
+        <h1 class="heading"><span>New Arrival</span></h1>
+        <div class="box-container">
+            <!-- Product 1 -->
+            <div class="box" id="product1">
+                <div class="images">
+                    <img src="arr_img1.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>SMART-TV</h3>
+                    <div class="sub-info">
+                        <strong class="price">10000/-</strong> <span class="cross">15000/-</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product1"></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                </div>
+            </div>
+    
+            <!-- Product 2 -->
+            <div class="box" id="product2">
+                <div class="images">
+                    <img src="arr_img2.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>PLAY-STATION</h3>
+                    <div class="sub-info">
+                        <strong class="price">20000/-</strong> <span class="cross">55000/-</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product2"></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                </div>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="box" id="product3">
+                <div class="images">
+                    <img src="arr_img3.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>SHOES</h3>
+                    <div class="sub-info">
+                        <strong class="price">1000/-</strong> <span class="cross">5000/-</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product3"></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                </div>
+            </div>
+    
+            <!-- Add more products similarly -->
+            <div class="box " id="product4">
+                <div class="images">
+                    <img src="arr_img4.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>SMART-PHONE</h3>
+                    <div class="sub-info">
+                        <strong class="price">10000/-</strong> <span class="cross">15000-/</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product4"></i></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                </div>
+            </div>
+
+            <div class="box" id="product5">
+                <div class="images">
+                    <img src="arr_img5.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>T-SHIRT</h3>
+                    <div class="sub-info">
+                        <strong class="price">10000/-</strong> <span class="cross">15000-/</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product5"></i></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                </div>
+            </div>
+
+            <div class="box" id="product6">
+                <div class="images">
+                    <img src="arr_img6.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <h3>ALEXA</h3>
+                    <div class="sub-info">
+                        <strong class="price">10000/-</strong><span class="cross">15000-/</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-lay">
+                    <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                    <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product6"></i></a>
+                    <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                </div>
+            </div>
+        
+        </div>
+        <div id="Popular">
+            <h1 class="heading"><span>Most Popular</span></h1>
+            <div class="box-container">
+                <!-- Product 1 -->
+                <div class="box" id="product1">
+                    <div class="images">
+                        <img src="g_img1.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>SMART-TV</h3>
+                        <div class="sub-info">
+                            <strong class="price">10000/-</strong> <span class="cross">15000/-</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product1"></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    </div>
+                </div>
+        
+                <!-- Product 2 -->
+                <div class="box" id="product2">
+                    <div class="images">
+                        <img src="g_img2.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>PLAY-STATION</h3>
+                        <div class="sub-info">
+                            <strong class="price">20000/-</strong> <span class="cross">55000/-</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product2"></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    </div>
+                </div>
+        
+                <!-- Product 3 -->
+                <div class="box" id="product3">
+                    <div class="images">
+                        <img src="g_img3.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>SHOES</h3>
+                        <div class="sub-info">
+                            <strong class="price">1000/-</strong> <span class="cross">5000/-</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product3"></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    </div>
+                </div>
+        
+                <!-- Add more products similarly -->
+                <div class="box " id="product4">
+                    <div class="images">
+                        <img src="g_img4.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>SMART-PHONE</h3>
+                        <div class="sub-info">
+                            <strong class="price">10000/-</strong> <span class="cross">15000-/</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product4"></i></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                    </div>
+                </div>
+    
+                <div class="box" id="product5">
+                    <div class="images">
+                        <img src="g_img5.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>T-SHIRT</h3>
+                        <div class="sub-info">
+                            <strong class="price">10000/-</strong> <span class="cross">15000-/</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product5"></i></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                    </div>
+                </div>
+    
+                <div class="box" id="product6">
+                    <div class="images">
+                        <img src="g_img6.jpg" alt="">
+                    </div>
+                    <div class="discription">
+                        <h3>ALEXA</h3>
+                        <div class="sub-info">
+                            <strong class="price">10000/-</strong><span class="cross">15000-/</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="over-lay">
+                        <a href="#" style="--i:1;" class="fas fa-heart"></i></a>
+                        <a href="#" style="--i:2;" class="fas fa-shopping-cart add-to-cart-btn" data-product-id="product6"></i></a>
+                        <a href="#" style="--i:3;" class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+
+     
+
+    <section class="feature" id="feature">
+        <h3 class="heading"><span>New Featured</span></h3>
+        <div class="boxed">
+            <div class="watch-image">
+                <img class="wimg" src="watch1.jpg" alt="HMT Watch">
+                <div class="about">
+                    <h3>HMT watches</h3>
+                    <div class="dis">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quaerat.
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rate">
+                        <strong class="price">1000/- </strong> <span class="cross">5000/-</span>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="buttons">Buy</button>
+                    <button class="buttons" onclick="addToCart('watch1.jpg', 'HMT Watches', 1000)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Function to add item to cart
+        function addToCart(image, title, price) {
+            // Get cart data from localStorage, or initialize it as an empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Create new item object
+            const item = {
+                image: image,
+                title: title,
+                price: price + '/-'
+            };
+    
+            // Add item to the cart array
+            cart.push(item);
+    
+            // Save the updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            alert('Item added to cart!');
+        }
+    </script>
+    
+    <!-- id="menu" -->
+    <div class="gallery" id="gallery">
+        <h1 class="heading"><span>Coming Soon</span></h1>
+
+        <ul class="control">
+            <li class="btn1" data-filter='all'>All</li>
+            <li class="btn1" data-filter='phone'>Phone</li>
+            <li class="btn1" data-filter='laptop'>Laptop</li>
+            <li class="btn1" data-filter='headphone'>Headphone</li>
+            <li class="btn1" data-filter='shoes'>Shoes</li>
+        </ul>
+        <div class="images-container">
+            <div class="box phone">
+                <div class="pics">
+                    <img src="g_img1.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Smart-Phone</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box phone">
+                <div class="pics">
+                    <img src="g_img2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Smart-phone</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box laptop">
+                <div class="pics">
+                    <img src="g_img3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Laptop</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box shoes">
+                <div class="pics">
+                    <img src="g_img4.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Shoes</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box laptop">
+                <div class="pics">
+                    <img src="g_img5.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Laptop</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box headphone">
+                <div class="pics">
+                    <img src="g_img6.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Headphone</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box shoes">
+                <div class="pics">
+                    <img src="g_img7.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Shoes</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box headphone">
+                <div class="pics">
+                    <img src="g_img8.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Headphone</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box headphone">
+                <div class="pics">
+                    <img src="g_img9.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Headphone</h3>
+                    <div class="subinfo">
+                        <strong class="price">1000-/</strong>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <section class="deal" id="deal">
+        <h1 class="heading"><span>Deal</span></h1>
+        <div class="box-cont">
+            <div class="box">
+                <div class="photo">
+                    <img src="deal1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3><strong>New Smart-Phone</strong></h3>
+                    <div class="dsic">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <button class="btn1">Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="photo">
+                    <img src="deal2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3><strong>New Laptop</strong></h3>
+                    <div class="dsic">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <button class="btn1">Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast delivery</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-user-clock"></i>
+                <h3>10 days return</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-box"></i>
+                <h3>Safe delivery</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-money-check-alt"></i>
+                <h3>Cash on delivery</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
+    <section class="news-letter">
+        <h3><strong>Stay in touch for discounts and deals</strong></h3>
+        <form action="">
+            <input type="email" placeholder="enter your email">
+            <button type="submit">submit</button>
+        </form>
+    </section>
+
+    <section class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Shopping Store. All rights reserved.</p>
+            <p>Designed byMashood baig</p>
+        </div>
+    </section>
+    
+    <style>
+        .footer {
+            background-color: #E0F7FA; /* Light blue background */
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .footer-container {
+            color: #00796b; /* Darker blue for text */
+        }
+    
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    
+        .footer p:first-child {
+            font-weight: bold;
+        }
+    </style>
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
